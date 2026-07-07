@@ -2,7 +2,7 @@
  * matrix.js
  * ------------------------------------
  * PURPOSE:
- * Runs the transition between boot and terminal.
+ * Runs the transition between boot and terminal mode, displaying a matrix-like effect with falling characters, log messages, and ASCII art.
  */
 
 const Matrix = {
