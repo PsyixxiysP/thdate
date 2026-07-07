@@ -1,0 +1,11 @@
+{
+  "title": "Tree Photography",
+  "author": "Harrison Szell",
+  "type": "poem",
+  "docxPath": "poetry/freeform/tree-photography/tree-photography.docx",
+  "themePath": "poetry/freeform/tree-photography/theme.css",
+  "illustration": {
+    "type": "ascii",
+    "path": "poetry/freeform/tree-photography/ascii.txt"
+  }
+}

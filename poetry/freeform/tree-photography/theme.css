@@ -1,0 +1,17 @@
+.thdate-window[data-story="tree-photography"] .window-body {
+  position: relative;
+
+  background-image:
+    linear-gradient(
+      rgba(244, 236, 216, 0.78),
+      rgba(244, 236, 216, 0.78)
+    ),
+    url("tree-photography.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: local;
+
+  color: #1d1712;
+  font-family: Georgia, serif;
+}

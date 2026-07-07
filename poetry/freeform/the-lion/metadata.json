@@ -1,0 +1,11 @@
+{
+  "title": "The Lion",
+  "author": "Harrison Szell",
+  "type": "poem",
+  "docxPath": "poetry/freeform/the-lion/the-lion.docx",
+  "themePath": "poetry/freeform/the-lion/theme.css",
+  "illustration": {
+    "type": "ascii",
+    "path": "poetry/freeform/the-lion/ascii.txt"
+  }
+}

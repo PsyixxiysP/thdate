@@ -26,24 +26,41 @@ const FileSystem = {
         children: {
           "long_form": { type: "empty", title: "Long Form" },
           poetry: {
-           type: "directory",
-           title: "Poetry",
-           children: {
-                freeform: {
-                 type: "directory",
-                 title: "Freeform",
-                children: {}
-                         },
-                 haikus: {
-                 type: "directory",
-                 title: "Haikus",
-                 children: {
-                    "collection-001": {
-                   type: "collection",
-                   title: "Collection 001",
-                   author: "Harrison Szell",
-                   collectionId: "haiku-collection-001",
-                   metadataPath: "poetry/haikus/collection-001/metadata.json"
+  type: "directory",
+  title: "Poetry",
+  children: {
+    freeform: {
+      type: "directory",
+      title: "Freeform",
+      children: {
+        "tree-photography": {
+          type: "document",
+          title: "Tree Photography",
+          author: "Harrison Szell",
+          storyId: "tree-photography",
+          metadataPath: "poetry/freeform/tree-photography/metadata.json"
+        },
+
+        "the-lion": {
+          type: "document",
+          title: "The Lion",
+          author: "Harrison Szell",
+          storyId: "the-lion",
+          metadataPath: "poetry/freeform/the-lion/metadata.json"
+        }
+      }
+    },
+
+    haikus: {
+      type: "directory",
+      title: "Haikus",
+      children: {
+        "collection-001": {
+          type: "collection",
+          title: "Collection 001",
+          author: "Harrison Szell",
+          collectionId: "haiku-collection-001",
+          metadataPath: "poetry/haikus/collection-001/metadata.json"
         }
       }
     }
@@ -109,9 +126,12 @@ const FileSystem = {
      collectionId: "haiku-collection-001",
      metadataPath: "poetry/haikus/collection-001/metadata.json"
 },
-    untitled3: {
-      type: "empty",
-      title: "Untitled 3"
+    "the-lion": {
+      type: "document",
+  title: "The Lion",
+  author: "Harrison Szell",
+  storyId: "the-lion",
+  metadataPath: "poetry/freeform/the-lion/metadata.json"
     }
   }
 },
