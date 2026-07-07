@@ -1,0 +1,11 @@
+{
+  "title": "The Depressed Man",
+  "author": "Harrison Szell",
+  "type": "story",
+  "docxPath": "stories/literary/the-depressed-man/The Depressed Man.docx",
+  "themePath": "stories/literary/the-depressed-man/theme.css",
+  "illustration": {
+    "type": "ascii",
+    "path": "stories/literary/the-depressed-man/ascii.txt"
+  }
+}

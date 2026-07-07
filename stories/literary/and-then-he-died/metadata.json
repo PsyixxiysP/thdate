@@ -1,0 +1,11 @@
+{
+  "title": "And Then He Died",
+  "author": "Harrison Szell",
+  "type": "story",
+  "docxPath": "stories/literary/and-then-he-died/And Then He Died.docx",
+  "themePath": "stories/literary/and-then-he-died/theme.css",
+  "illustration": {
+    "type": "ascii",
+    "path": "stories/literary/and-then-he-died/ascii.txt"
+  }
+}

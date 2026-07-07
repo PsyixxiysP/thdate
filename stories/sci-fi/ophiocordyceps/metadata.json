@@ -1,0 +1,11 @@
+{
+  "title": "Ophiocordyceps",
+  "author": "Harrison Szell",
+  "type": "story",
+  "docxPath": "stories/sci-fi/ophiocordyceps/Ophiocordyceps.docx",
+  "themePath": "stories/sci-fi/ophiocordyceps/theme.css",
+  "illustration": {
+    "type": "ascii",
+    "path": "stories/sci-fi/ophiocordyceps/ascii.txt"
+  }
+}

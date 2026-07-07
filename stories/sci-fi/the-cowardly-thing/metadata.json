@@ -1,0 +1,11 @@
+{
+  "title": "The Cowardly Thing",
+  "author": "Harrison Szell",
+  "type": "story",
+  "docxPath": "stories/sci-fi/the-cowardly-thing/The Cowardly Thing.docx",
+  "themePath": "stories/sci-fi/the-cowardly-thing/theme.css",
+  "illustration": {
+    "type": "ascii",
+    "path": "stories/sci-fi/the-cowardly-thing/ascii.txt"
+  }
+}

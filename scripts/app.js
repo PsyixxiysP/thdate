@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   WindowManager.init();
   Terminal.init();
   Countdown.init();
+  renderNewPanel();
 
   const skipHandler = (event) => {
     if (event.key !== "Enter") return;
@@ -77,4 +78,19 @@ function waitForAnyButton() {
     window.addEventListener("keydown", handler);
     window.addEventListener("click", handler);
   });
+}
+
+function renderNewPanel() {
+  const panel = document.getElementById("new-panel-items");
+  if (!panel) return;
+
+  const newItems = FileSystem.tree.children.new.children;
+
+  panel.innerHTML = Object.entries(newItems).map(([key, item]) => {
+    return `
+      <button data-command="open ${key}">
+        ${item.title || key}
+      </button>
+    `;
+  }).join("");
 }

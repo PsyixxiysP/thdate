@@ -22,6 +22,7 @@ COMMANDS:
     if (lower === "dir" || lower === "ls") return this.dir();
     if (lower === "tree") return this.tree();
     if (lower === "ipconfig") return this.ipconfig();
+    if (lower === "random") return this.random();
     if (lower === "back" || lower === "cd ..") return this.back();
     if (lower === "menu" || lower === "home") return this.menu();
     if (lower === "clear" || lower === "cls") return Terminal.print("");
@@ -95,19 +96,41 @@ COMMANDS:
     return;
   }
 
-  if (node.type === "empty") {
-Terminal.print(`
+if (node.type === "empty") {
+  if (name === "bio") {
+    document.body.classList.add("page-glitch");
+
+    setTimeout(() => {
+      document.body.classList.remove("page-glitch");
+
+      Terminal.print(`
 ${FileSystem.getPrompt()}
 
-${node.title || name}
+Harrison Szell writes things. He also takes photos. This is a website. His website. There is no reason to panic.
 
 COMMANDS:
   <button class="terminal-link" data-command="back">back</button>
   <button class="terminal-link" data-command="menu">menu</button>
-`);    document.body.classList.add("page-glitch");
-    setTimeout(() => document.body.classList.remove("page-glitch"), 600);
+`);
+    }, 450);
+
     return;
   }
+
+  Terminal.print(`
+${FileSystem.getPrompt()}
+
+${node.output || node.title || name}
+
+COMMANDS:
+  <button class="terminal-link" data-command="back">back</button>
+  <button class="terminal-link" data-command="menu">menu</button>
+`);
+
+  document.body.classList.add("page-glitch");
+  setTimeout(() => document.body.classList.remove("page-glitch"), 600);
+  return;
+}
 
   this.error("Cannot open item.");
 },
@@ -121,6 +144,46 @@ COMMANDS:
     FileSystem.currentPath = ["THDATE"];
     this.dir();
   },
+
+random() {
+  const items = [];
+
+  const scan = (node) => {
+    if (!node) return;
+
+    if (node.type === "document" || node.type === "collection") {
+      items.push(node);
+    }
+
+    if (node.children) {
+      Object.values(node.children).forEach(scan);
+    }
+  };
+
+  scan(FileSystem.tree);
+
+  if (!items.length) {
+    return this.error("No readable archive entries found.");
+  }
+
+  const item = items[Math.floor(Math.random() * items.length)];
+
+  Terminal.print(`
+${FileSystem.getPrompt()}
+
+RANDOM ARCHIVE RETRIEVAL...
+OPENING: ${item.title || "UNKNOWN ENTRY"}
+
+${this.navButtons()}
+`);
+
+  if (item.type === "collection") {
+    WindowManager.openCollection(item);
+    return;
+  }
+
+  WindowManager.openDocument(item);
+},
 
 ipconfig() {
   Terminal.print(`Windows IP Configuration
@@ -213,6 +276,8 @@ ${this.navButtons()}`);
   tree
   cd [directory]
   open [file]
+  random
+  ipconfig
   back
   menu
   clear
@@ -230,6 +295,7 @@ ${this.navButtons()}`);
   setTimeout(() => document.body.classList.remove("page-glitch"), 600);
 }
 
-  
+
 
 };
+

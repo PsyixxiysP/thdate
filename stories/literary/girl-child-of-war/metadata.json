@@ -1,0 +1,11 @@
+{
+  "title": "Girl Child of War",
+  "author": "Harrison Szell",
+  "type": "story",
+  "docxPath": "stories/literary/girl-child-of-war/Girl Child of War.docx",
+  "themePath": "stories/literary/girl-child-of-war/theme.css",
+  "illustration": {
+    "type": "ascii",
+    "path": "stories/literary/girl-child-of-war/ascii.txt"
+  }
+}

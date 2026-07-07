@@ -1,0 +1,11 @@
+{
+  "title": "Rom-Comm",
+  "author": "Harrison Szell",
+  "type": "story",
+  "docxPath": "stories/sci-fi/rom-comm/Rom-Comm.docx",
+  "themePath": "stories/sci-fi/rom-comm/theme.css",
+  "illustration": {
+    "type": "ascii",
+    "path": "stories/sci-fi/rom-comm/ascii.txt"
+  }
+}
