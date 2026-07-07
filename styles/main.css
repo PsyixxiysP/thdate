@@ -21,7 +21,8 @@ body {
   background: var(--black);
   color: var(--green);
   font-family: "Courier New", monospace;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .hidden {
@@ -237,6 +238,7 @@ body {
 .desktop {
   min-height: 100vh;
   padding: 3rem;
+  padding-bottom: 6rem;
 }
 
 .right-panel {

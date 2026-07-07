@@ -21,6 +21,7 @@ COMMANDS:
     if (lower === "help") return this.help();
     if (lower === "dir" || lower === "ls") return this.dir();
     if (lower === "tree") return this.tree();
+    if (lower === "ipconfig") return this.ipconfig();
     if (lower === "back" || lower === "cd ..") return this.back();
     if (lower === "menu" || lower === "home") return this.menu();
     if (lower === "clear" || lower === "cls") return Terminal.print("");
@@ -120,6 +121,59 @@ COMMANDS:
     FileSystem.currentPath = ["THDATE"];
     this.dir();
   },
+
+ipconfig() {
+  Terminal.print(`Windows IP Configuration
+
+Host Name . . . . . . . . . . . . : THDATE
+Primary DNS Suffix  . . . . . . . :
+Node Type . . . . . . . . . . . . : Hybrid
+IP Routing Enabled. . . . . . . . : No
+WINS Proxy Enabled. . . . . . . . : No
+
+
+Ethernet adapter Archive:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . : THDATE Archive Network Adapter
+   Physical Address. . . . . . . . : 00-13-37-66-66-42
+   DHCP Enabled. . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . : Yes
+
+   IPv4 Address. . . . . . . . . . : 192.168.0.13
+   Subnet Mask . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . : 192.168.0.1
+
+
+Tunnel adapter Localhost:
+
+   Media State . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  :
+
+   IPv6 Address. . . . . . . . . . : ::1
+   Link-local IPv6 Address . . . . : fe80::1
+
+
+Tunnel adapter Loopback:
+
+   Media State . . . . . . . . . . : Connected
+
+   IPv4 Address. . . . . . . . . . : 127.0.0.1
+   IPv4 Address. . . . . . . . . . : 127.0.0.1
+   IPv4 Address. . . . . . . . . . : 127.0.0.1
+
+ERROR:
+Duplicate localhost detected.
+
+Repairing...
+
+Repair failed.
+
+Reason:
+files no longer exist...
+
+${this.navButtons()}`);
+},
 
   tree() {
   Terminal.print(`THDATE

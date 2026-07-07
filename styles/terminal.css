@@ -13,6 +13,7 @@
   white-space: pre-wrap;
   line-height: 1.45;
   min-height: 55vh;
+  padding-bottom: 2rem;
 }
 
 .terminal-form {
