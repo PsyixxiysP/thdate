@@ -53,6 +53,11 @@
   line-height: 1.85;
 }
 
+.window-body p {
+    margin: 0 0 1.6rem;
+}
+
+
 .window-body h1 {
   text-align: center;
   font-size: clamp(2rem, 5vw, 4rem);

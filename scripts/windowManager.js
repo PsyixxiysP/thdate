@@ -72,64 +72,63 @@ const WindowManager = {
 },
 
   async openDocument(fileNode) {
-    let metadata = {
-      title: fileNode.title,
-      author: fileNode.author || "",
-      docxPath: fileNode.docxPath || "",
-      themePath: fileNode.themePath || "",
-    };
+  let metadata = {
+    title: fileNode.title,
+    author: fileNode.author || "",
+    docxPath: fileNode.docxPath || "",
+    themePath: fileNode.themePath || "",
+  };
 
-    if (fileNode.metadataPath) {
-      try {
-        const metadataResponse = await fetch(fileNode.metadataPath, {
-          cache: "no-store",
-        });
+  if (fileNode.metadataPath) {
+    try {
+      const metadataResponse = await fetch(fileNode.metadataPath, {
+        cache: "no-store",
+      });
 
-        if (!metadataResponse.ok) {
-          throw new Error(`Could not fetch metadata: ${metadataResponse.status}`);
-        }
-
-        metadata = await metadataResponse.json();
-      } catch (error) {
-        console.warn("Could not load story metadata:", error);
+      if (!metadataResponse.ok) {
+        throw new Error(`Could not fetch metadata: ${metadataResponse.status}`);
       }
+
+      metadata = await metadataResponse.json();
+    } catch (error) {
+      console.warn("Could not load story metadata:", error);
     }
+  }
 
-   const content = await this.loadDocx(metadata.docxPath);
-    const illustration = await this.loadIllustration(
-     metadata.illustration
-     );
-    if (metadata.themePath) {
-      this.loadTheme(metadata.themePath);
-    }
+  const content = await this.loadDocx(metadata.docxPath);
+  const illustration = await this.loadIllustration(metadata.illustration);
 
-    const win = document.createElement("article");
-    win.className = "thdate-window";
-    win.dataset.story = fileNode.storyId || "";
+  if (metadata.themePath) {
+    this.loadTheme(metadata.themePath);
+  }
 
-    win.innerHTML = `
-      <header class="window-bar">
-        <span>${metadata.title}</span>
+  const win = document.createElement("article");
+  win.className = "thdate-window";
+  win.dataset.story = fileNode.storyId || "";
 
-        <nav class="window-controls">
-          <button type="button" data-action="fullscreen">□</button>
-          <button type="button" data-action="close">✕</button>
-        </nav>
-      </header>
+  win.innerHTML = `
+    <header class="window-bar">
+      <span>${metadata.title}</span>
 
-      <section class="window-body">
-       <h1>${metadata.title}</h1>
-      <div class="author">
-      ${metadata.author || ""}
-      </div>
+      <nav class="window-controls">
+        <button type="button" data-action="fullscreen">□</button>
+        <button type="button" data-action="close">✕</button>
+      </nav>
+    </header>
+
+    <section class="window-body">
+      <h1>${metadata.title}</h1>
+      <div class="author">${metadata.author || ""}</div>
+
       ${illustration}
-      ${content}
-      </section>
-     `;
 
-    this.attachWindowControls(win);
-    this.layer.appendChild(win);
-  },
+      ${content}
+    </section>
+  `;
+
+  this.attachWindowControls(win);
+  this.layer.appendChild(win);
+},
 
   async openCollection(fileNode) {
     let metadata = {

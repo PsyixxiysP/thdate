@@ -1,0 +1,87 @@
+.thdate-window[data-story="the-lion"] {
+  background: #21102e;
+}
+
+.thdate-window[data-story="the-lion"] .window-bar {
+  background: #2d123d;
+  color: #ffe6a3;
+  border-bottom: 2px solid #e98a24;
+}
+
+.thdate-window[data-story="the-lion"] .window-controls button {
+  background: #e98a24;
+  color: #2d123d;
+  border: 1px solid #ffd27a;
+  padding: 0.12rem 0.45rem;
+}
+
+.thdate-window[data-story="the-lion"] .window-controls button:hover {
+  background: #ffd27a;
+}
+
+.thdate-window[data-story="the-lion"] .window-body {
+  background:
+    linear-gradient(
+      rgba(20, 8, 31, 0.42),
+      rgba(20, 8, 31, 0.42)
+    ),
+    url("the-lion.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #fff3d0;
+  font-family: Georgia, serif;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+}
+
+.thdate-window[data-story="the-lion"] .window-body::before {
+  content: "";
+  position: fixed;
+  inset: 44px 0 0 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(255, 168, 64, 0.18),
+      transparent 38%
+    );
+}
+
+.thdate-window[data-story="the-lion"] h1 {
+  color: #ffe39a;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.85);
+}
+
+.thdate-window[data-story="the-lion"] .author {
+  color: #ffc463;
+  margin-bottom: 3rem;
+}
+
+.thdate-window[data-story="the-lion"] .window-body p {
+  max-width: 620px;
+  margin: 0 auto 2.2rem;
+
+  line-height: 1.9;
+
+  background: none;
+  padding: 0;
+
+  color: #fff3d0;
+}
+
+.thdate-window[data-story="the-lion"] .illustration pre {
+  color: #ffd37a;
+}
+
+.thdate-window[data-story="the-lion"] .window-body p {
+    max-width: 620px;
+    margin: 0 auto 2.8rem;   /* space AFTER each stanza */
+
+    line-height: 1.45;        /* spacing BETWEEN lines */
+
+    color: #fff3d0;
+}
