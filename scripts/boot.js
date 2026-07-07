@@ -7,16 +7,19 @@
 
 const Boot = {
   async start() {
-    const bootScreen = document.getElementById("boot-screen");
-    const bootLog = document.getElementById("boot-log");
+  const bootScreen = document.getElementById("boot-screen");
+  const bootLog = document.getElementById("boot-log");
 
-    bootScreen.classList.remove("hidden");
-    bootLog.textContent = "";
+  const heading = bootScreen.querySelector("h1");
+  heading.dataset.shadow = heading.textContent;
 
-    await this.wait(2200);
+  bootScreen.classList.remove("hidden");
+  bootLog.textContent = "";
 
-    bootScreen.classList.add("hidden");
-  },
+  await this.wait(2200);
+
+  bootScreen.classList.add("hidden");
+},
 
   wait(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));

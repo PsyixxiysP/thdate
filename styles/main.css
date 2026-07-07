@@ -28,23 +28,202 @@ body {
   display: none !important;
 }
 
+/* BOOT SCREEN */
+
 .boot-screen {
   min-height: 100vh;
   padding: 4vw;
 }
 
-.boot-screen h1 {
+.boot-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+
   font-size: clamp(3rem, 10vw, 9rem);
   line-height: 0.9;
   letter-spacing: -0.08em;
-  margin: 0;
-  animation: smallGlitch 0.3s infinite steps(2);
+}
+
+.boot-title span {
+  display: block;
+
+  animation:
+    smallGlitch 0.3s infinite steps(2),
+    bootTextShadowSpread 1.2s ease 1s forwards;
 }
 
 .boot-countdown {
   color: var(--red);
   font-size: clamp(2.5rem, 8vw, 7rem);
   margin-top: 2rem;
+
+  animation: bootCountdownShadowSpread 1.2s ease 1s forwards;
+}
+
+@keyframes bootTextShadowSpread {
+  0% {
+    text-shadow: none;
+  }
+
+  10% {
+    text-shadow:
+      3px 1px 0 rgba(0,255,255,.18);
+  }
+
+  20% {
+    text-shadow:
+      3px 1px 0 rgba(0,255,255,.18),
+      7px 2px 0 rgba(0,240,220,.17);
+  }
+
+  35% {
+    text-shadow:
+      3px 1px 0 rgba(0,255,255,.18),
+      7px 2px 0 rgba(0,240,220,.17),
+      12px 3px 0 rgba(0,225,180,.16),
+      18px 4px 0 rgba(0,205,140,.15);
+  }
+
+  45% {
+    text-shadow:
+      3px 1px 0 rgba(0,255,255,.18),
+      7px 2px 0 rgba(0,240,220,.17),
+      12px 3px 0 rgba(0,225,180,.16),
+      18px 4px 0 rgba(0,205,140,.15),
+      25px 5px 0 rgba(30,190,100,.14),
+      33px 6px 0 rgba(90,175,70,.13);
+  }
+
+  60% {
+    text-shadow:
+      3px 1px 0 rgba(0,255,255,.18),
+      7px 2px 0 rgba(0,240,220,.17),
+      12px 3px 0 rgba(0,225,180,.16),
+      18px 4px 0 rgba(0,205,140,.15),
+      25px 5px 0 rgba(30,190,100,.14),
+      33px 6px 0 rgba(90,175,70,.13),
+      44px 8px 0 rgba(150,150,45,.12),
+      58px 10px 0 rgba(185,120,35,.11),
+      76px 13px 0 rgba(215,90,30,.10);
+  }
+
+  80% {
+    text-shadow:
+      3px 1px 0 rgba(0,255,255,.18),
+      7px 2px 0 rgba(0,240,220,.17),
+      12px 3px 0 rgba(0,225,180,.16),
+      18px 4px 0 rgba(0,205,140,.15),
+      25px 5px 0 rgba(30,190,100,.14),
+      33px 6px 0 rgba(90,175,70,.13),
+      44px 8px 0 rgba(150,150,45,.12),
+      58px 10px 0 rgba(185,120,35,.11),
+      76px 13px 0 rgba(215,90,30,.10),
+      100px 17px 0 rgba(235,65,35,.09),
+      132px 22px 0 rgba(245,45,50,.08);
+  }
+
+  100% {
+    text-shadow:
+      3px 1px 0 rgba(0,255,255,.18),
+      7px 2px 0 rgba(0,240,220,.17),
+      12px 3px 0 rgba(0,225,180,.16),
+      18px 4px 0 rgba(0,205,140,.15),
+      25px 5px 0 rgba(30,190,100,.14),
+      33px 6px 0 rgba(90,175,70,.13),
+      44px 8px 0 rgba(150,150,45,.12),
+      58px 10px 0 rgba(185,120,35,.11),
+      76px 13px 0 rgba(215,90,30,.10),
+      100px 17px 0 rgba(235,65,35,.09),
+      132px 22px 0 rgba(245,45,50,.08),
+      172px 28px 0 rgba(255,30,70,.07),
+      222px 36px 0 rgba(255,25,65,.06),
+      284px 46px 0 rgba(255,20,60,.05),
+      360px 58px 0 rgba(255,15,55,.04);
+  }
+}
+
+@keyframes bootCountdownShadowSpread {
+  0% {
+    text-shadow: none;
+  }
+
+  10% {
+    text-shadow:
+      3px 1px 0 rgba(255,70,90,.20);
+  }
+
+  20% {
+    text-shadow:
+      3px 1px 0 rgba(255,70,90,.20),
+      7px 2px 0 rgba(255,66,86,.18);
+  }
+
+  35% {
+    text-shadow:
+      3px 1px 0 rgba(255,70,90,.20),
+      7px 2px 0 rgba(255,66,86,.18),
+      12px 3px 0 rgba(255,62,82,.17),
+      18px 4px 0 rgba(255,58,78,.16);
+  }
+
+  45% {
+    text-shadow:
+      3px 1px 0 rgba(255,70,90,.20),
+      7px 2px 0 rgba(255,66,86,.18),
+      12px 3px 0 rgba(255,62,82,.17),
+      18px 4px 0 rgba(255,58,78,.16),
+      25px 5px 0 rgba(255,54,74,.15),
+      33px 6px 0 rgba(255,50,70,.14);
+  }
+
+  60% {
+    text-shadow:
+      3px 1px 0 rgba(255,70,90,.20),
+      7px 2px 0 rgba(255,66,86,.18),
+      12px 3px 0 rgba(255,62,82,.17),
+      18px 4px 0 rgba(255,58,78,.16),
+      25px 5px 0 rgba(255,54,74,.15),
+      33px 6px 0 rgba(255,50,70,.14),
+      44px 8px 0 rgba(255,46,66,.13),
+      58px 10px 0 rgba(255,42,62,.12),
+      76px 13px 0 rgba(255,38,58,.11);
+  }
+
+  80% {
+    text-shadow:
+      3px 1px 0 rgba(255,70,90,.20),
+      7px 2px 0 rgba(255,66,86,.18),
+      12px 3px 0 rgba(255,62,82,.17),
+      18px 4px 0 rgba(255,58,78,.16),
+      25px 5px 0 rgba(255,54,74,.15),
+      33px 6px 0 rgba(255,50,70,.14),
+      44px 8px 0 rgba(255,46,66,.13),
+      58px 10px 0 rgba(255,42,62,.12),
+      76px 13px 0 rgba(255,38,58,.11),
+      100px 17px 0 rgba(255,34,54,.10),
+      132px 22px 0 rgba(255,30,50,.09);
+  }
+
+  100% {
+    text-shadow:
+      3px 1px 0 rgba(255,70,90,.20),
+      7px 2px 0 rgba(255,66,86,.18),
+      12px 3px 0 rgba(255,62,82,.17),
+      18px 4px 0 rgba(255,58,78,.16),
+      25px 5px 0 rgba(255,54,74,.15),
+      33px 6px 0 rgba(255,50,70,.14),
+      44px 8px 0 rgba(255,46,66,.13),
+      58px 10px 0 rgba(255,42,62,.12),
+      76px 13px 0 rgba(255,38,58,.11),
+      100px 17px 0 rgba(255,34,54,.10),
+      132px 22px 0 rgba(255,30,50,.09),
+      172px 28px 0 rgba(255,26,46,.08),
+      222px 36px 0 rgba(255,22,42,.07),
+      284px 46px 0 rgba(255,18,38,.06),
+      360px 58px 0 rgba(255,14,34,.05);
+  }
 }
 
 #boot-log {
@@ -52,6 +231,8 @@ body {
   font-size: 1rem;
   line-height: 1.5;
 }
+
+/* DESKTOP */
 
 .desktop {
   min-height: 100vh;
