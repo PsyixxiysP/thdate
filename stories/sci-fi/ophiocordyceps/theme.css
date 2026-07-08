@@ -46,6 +46,53 @@
 }
 
 .thdate-window[data-story="ophiocordyceps"] ::selection {
-    background: #641111;
+    background: #06812b;
     color: #F3E7DC;
+}
+
+.thdate-window[data-story="ophiocordyceps"] .window-bar {
+  background: #116436;
+  color: #dff8e9;
+  border-bottom: 3px solid #1fa164;
+  font-family: "Courier New", monospace;
+  position: relative;
+  overflow: hidden;
+}
+
+/* white mushroom-cap spots */
+.thdate-window[data-story="ophiocordyceps"] .window-bar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 8% 45%, #fff7ef 0 7px, transparent 8px),
+    radial-gradient(circle at 24% 25%, #fff7ef 0 5px, transparent 6px),
+    radial-gradient(circle at 43% 60%, #fff7ef 0 8px, transparent 9px),
+    radial-gradient(circle at 67% 30%, #fff7ef 0 6px, transparent 7px),
+    radial-gradient(circle at 85% 55%, #fff7ef 0 9px, transparent 10px);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.thdate-window[data-story="ophiocordyceps"] .window-title,
+.thdate-window[data-story="ophiocordyceps"] .window-controls {
+  position: relative;
+  z-index: 1;
+}
+
+.thdate-window[data-story="ophiocordyceps"] .window-controls button {
+  background: #fff7ef;
+  color: #1fa164;
+  border: 1px solid #1fa164;
+}
+
+.thdate-window[data-story="ophiocordyceps"] .window-controls button:hover {
+  background: #1fa164;
+  color: #fff7ef;
+}
+
+.thdate-window[data-story="ophiocordyceps"] .window-bar > span {
+    color: #042007;
+    position: relative;
+    z-index: 1;
 }
