@@ -1,4 +1,4 @@
-# THDATE Modular Starter
+# Fake Operating System Website
 ## Structure
 - `index.html` contains the main HTML shell.
 - `styles/` contains separate CSS files by responsibility.
