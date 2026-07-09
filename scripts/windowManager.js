@@ -117,8 +117,21 @@ const WindowManager = {
     </header>
 
     <section class="window-body">
-      <h1>${metadata.title}</h1>
-      <div class="author">${metadata.author || ""}</div>
+    ${
+        useStoryPage
+            ? `
+                <article class="story-page">
+                    <h1>${metadata.title}</h1>
+                    <div class="author">${metadata.author || ""}</div>
+
+                    ${illustration}
+
+                    ${content}
+                </article>
+            `
+            : `
+                <h1>${metadata.title}</h1>
+                <div class="author">${metadata.author || ""}</div>
 
       ${illustration}
 
