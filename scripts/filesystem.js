@@ -116,7 +116,7 @@ const FileSystem = {
                     type: "document",
                     title: "The Depressed Man",
                     storyId: "the-depressed-man",
-                    metadataPath: "stories/literary/the-depressed-man/metadata.json"
+                    metadataPath: "stories/literary/the-depressed-man/meta.json"
                   },
                   "and-then-he-died": {
                     type: "document",
@@ -160,18 +160,12 @@ const FileSystem = {
       new: {
   type: "directory",
   children: {
-   "flotsam-and-jetsam": {
-  type: "collectiond",
-  title: "Flotsam & Jetsam [Collection 002]",
-  collectionId: "flotsam-and-jetsam",
-  metadataPath: "poetry/freeform/flotsam-and-jetsam/metadata.json -"
-},
     "i-dont-really-love-you": {
       type: "document",
       title: "I DON'T REALLY LOVE YOU [Literary - Short Story]",
       author: "Harrison Szell",
       storyId: "i-dont-really-love-you",
-      metadataPath: "stories/literary/i-dont-really-love-you/metadata.json -"
+      metadataPath: "stories/literary/i-dont-really-love-you/metadata.json"
     },
     "collection-001": {
      type: "collection",
@@ -192,7 +186,7 @@ const FileSystem = {
   title: "Ophiocordyceps [Sci-Fi -Short Story]",
   author: "Harrison Szell",
   storyId: "ophiocordyceps",
-  metadataPath: "stories/sci-fi/ophiocordyceps/metadata.json -"
+  metadataPath: "stories/sci-fi/ophiocordyceps/metadata.json"
     },
     "and-then-he-died": {
       type: "document",
