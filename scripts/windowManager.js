@@ -13,6 +13,7 @@ const WindowManager = {
   },
 
   async loadDocx(docxPath) {
+    
     if (!docxPath) return "<p>No document content loaded.</p>";
 
     try {
@@ -32,6 +33,31 @@ const WindowManager = {
         <pre>${error.message}</pre>
       `;
     }
+     console.log("Attempting to load DOCX:", docxPath);
+
+  if (!docxPath) return "<p>No document content loaded.</p>";
+
+  try {
+    const response = await fetch(docxPath, { cache: "no-store" });
+
+    console.log("DOCX response:", response.status, response.url);
+
+    if (!response.ok) {
+      throw new Error(`Could not fetch DOCX: ${response.status}`);
+    }
+
+    const arrayBuffer = await response.arrayBuffer();
+    const result = await mammoth.convertToHtml({ arrayBuffer });
+
+    return result.value;
+  } catch (error) {
+    console.error("DOCX loading failed:", docxPath, error);
+
+    return `
+      <p>Could not load document.</p>
+      <pre>${error.message}</pre>
+    `;
+  }
   },
 
   async loadIllustration(illustration) {

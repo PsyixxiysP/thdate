@@ -1,0 +1,100 @@
+.thdate-window[data-collection="flotsam-and-jetsam"] {
+  background: #10252b;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .window-bar {
+  background:
+    linear-gradient(90deg, rgba(194, 111, 62, 0.18), transparent 34%),
+    #17343b;
+  color: #e6ddc8;
+  border-bottom: 2px solid #b66c43;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .window-controls button {
+  background: #244b52;
+  color: #e6ddc8;
+  border: 1px solid #78979a;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .window-controls button:hover {
+  background: #b66c43;
+  color: #fff7e8;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .collection-shell {
+  background: #10252b;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .collection-tabs {
+  background: #132d33;
+  border-bottom: 1px solid #587b7e;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .collection-tabs button {
+  background: transparent;
+  color: #9cb8b7;
+  border: 0;
+  border-right: 1px solid rgba(156, 184, 183, 0.2);
+  font-family: "Courier New", monospace;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .collection-tabs button:hover {
+  background: #244b52;
+  color: #f0e7d3;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .collection-tabs button.active {
+  background: #d5c7aa;
+  color: #233336;
+  box-shadow: inset 0 -3px 0 #b66c43;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .window-body {
+  background:
+    radial-gradient(circle at 14% 20%, rgba(182, 108, 67, 0.13), transparent 24%),
+    radial-gradient(circle at 83% 72%, rgba(86, 132, 132, 0.14), transparent 28%),
+    linear-gradient(180deg, #ddd2b9, #cbbd9f);
+  color: #243436;
+  font-family: Georgia, serif;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] h1 {
+  color: #244b52;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .author {
+  color: #86543b;
+  margin-bottom: 3rem;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .collection-content {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .collection-content p {
+  color: #243436;
+  line-height: 1.5;
+  margin: 0 0 2.6rem;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .illustration pre {
+  color: #86543b;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] ::selection {
+  background: #b66c43;
+  color: #fff7e8;
+}
+
+@media (max-width: 700px) {
+  .thdate-window[data-collection="flotsam-and-jetsam"] .window-body {
+    padding: 2rem 1.35rem;
+  }
+
+  .thdate-window[data-collection="flotsam-and-jetsam"] .collection-content p {
+    margin-bottom: 2.2rem;
+  }
+}

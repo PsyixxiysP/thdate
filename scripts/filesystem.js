@@ -47,8 +47,15 @@ const FileSystem = {
           author: "Harrison Szell",
           storyId: "the-lion",
           metadataPath: "poetry/freeform/the-lion/metadata.json"
-        }
-      }
+        },
+       
+        "flotsam-and-jetsam": {
+  type: "collection",
+  title: "Flotsam & Jetsam [Collection 002]",
+  collectionId: "flotsam-and-jetsam",
+  metadataPath: "poetry/freeform/flotsam-and-jetsam/metadata.json"
+}
+}
     },
 
     haikus: {
@@ -153,6 +160,12 @@ const FileSystem = {
       new: {
   type: "directory",
   children: {
+   "flotsam-and-jetsam": {
+  type: "collection",
+  title: "Flotsam & Jetsam [Collection 002]",
+  collectionId: "flotsam-and-jetsam",
+  metadataPath: "poetry/freeform/flotsam-and-jetsam/metadata.json"
+},
     "i-dont-really-love-you": {
       type: "document",
       title: "I DON'T REALLY LOVE YOU [Literary - Short Story]",

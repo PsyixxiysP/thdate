@@ -97,3 +97,36 @@
   max-width: 100%;
   max-height: 450px;
 }
+
+.collection-window .collection-shell {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 44px);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.collection-window .collection-tabs {
+  flex: 0 0 auto;
+}
+
+.collection-window .collection-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .collection-content strong {
+  font-weight: 700;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .collection-content em {
+  font-style: italic;
+}
+
+.thdate-window[data-collection="flotsam-and-jetsam"] .collection-content u {
+  text-decoration: underline;
+}
+

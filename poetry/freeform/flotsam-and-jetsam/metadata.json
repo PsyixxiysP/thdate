@@ -1,0 +1,46 @@
+{
+  "title": "Flotsam & Jetsam [Poetry Collection 002]",
+  "author": "Harrison Szell",
+  "type": "collection",
+  "collectionId": "flotsam-and-jetsam",
+  "themePath": "poetry/freeform/flotsam-and-jetsam/theme.css",
+  "tabs": [
+    {
+      "title": "Before We Begin",
+      "docxPath": "poetry/freeform/flotsam-and-jetsam/before-we-begin.docx"
+    },
+    {
+      "title": "A Sunburnt Nose",
+      "docxPath": "poetry/freeform/flotsam-and-jetsam/a-sunburnt-nose.docx"
+    },
+    {
+      "title": "I AM FROM THE FUTURE",
+      "docxPath": "poetry/freeform/flotsam-and-jetsam/i-am-from-the-future.docx"
+    },
+    {
+      "title": "The Past Is a Siren",
+      "docxPath": "poetry/freeform/flotsam-and-jetsam/the-past-is-a-siren.docx"
+    },
+    {
+      "title": "WINE LOVES ME",
+      "docxPath": "poetry/freeform/flotsam-and-jetsam/wine-loves-me.docx"
+    },
+    {
+      "title": "The Overly Apologetic Heart",
+      "docxPath": "poetry/freeform/flotsam-and-jetsam/the-overly-apologetic-heart.docx"
+    },
+    {
+      "title": "The Art Wants What It Wants",
+      "docxPath": "poetry/freeform/flotsam-and-jetsam/the-art-wants-what-it-wants.docx"
+    },
+    
+    {
+      "title": "The World Goes on Turning",
+      "docxPath": "poetry/freeform/flotsam-and-jetsam/the-world-goes-on-turning.docx"
+    },
+     {
+      "title": "Fitting Together",
+      "docxPath": "poetry/freeform/flotsam-and-jetsam/fitting-together.docx"
+    }
+  ]
+}
