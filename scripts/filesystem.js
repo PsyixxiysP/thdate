@@ -161,17 +161,17 @@ const FileSystem = {
   type: "directory",
   children: {
    "flotsam-and-jetsam": {
-  type: "collectionddd",
+  type: "collectiond",
   title: "Flotsam & Jetsam [Collection 002]",
   collectionId: "flotsam-and-jetsam",
-  metadataPath: "poetry/freeform/flotsam-and-jetsam/metadata.json"
+  metadataPath: "poetry/freeform/flotsam-and-jetsam/metadata.json -"
 },
     "i-dont-really-love-you": {
-      type: "documentdd",
+      type: "document",
       title: "I DON'T REALLY LOVE YOU [Literary - Short Story]",
       author: "Harrison Szell",
       storyId: "i-dont-really-love-you",
-      metadataPath: "stories/literary/i-dont-really-love-you/metadata.json"
+      metadataPath: "stories/literary/i-dont-really-love-you/metadata.json -"
     },
     "collection-001": {
      type: "collection",
@@ -188,11 +188,11 @@ const FileSystem = {
   metadataPath: "poetry/freeform/the-lion/metadata.json"
     },
      "ophiocordyceps": {
-      type: "documentdd",
+      type: "document",
   title: "Ophiocordyceps [Sci-Fi -Short Story]",
   author: "Harrison Szell",
   storyId: "ophiocordyceps",
-  metadataPath: "stories/sci-fi/ophiocordyceps/metadata.json"
+  metadataPath: "stories/sci-fi/ophiocordyceps/metadata.json -"
     },
     "and-then-he-died": {
       type: "document",
