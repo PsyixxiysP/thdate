@@ -98,3 +98,48 @@
     margin-bottom: 2.2rem;
   }
 }
+
+
+@media (max-width: 600px) {
+  .thdate-window[data-collection="flotsam-and-jetsam"] .window-bar {
+    padding-left: 0.6rem;
+    padding-right: 0.35rem;
+  }
+
+  [data-collection="flotsam-and-jetsam"] .window-bar > span {
+    font-size: 0.8rem;
+  }
+
+  [data-collection="flotsam-and-jetsam"] .window-controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  [data-collection="flotsam-and-jetsam"] .window-controls button {
+    width: 1.8rem;
+    height: 1.8rem;
+    padding: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  [data-collection="flotsam-and-jetsam"] .collection-content pre {
+    font-size: 0.34rem;
+    line-height: 0.8;
+    letter-spacing: -0.04em;
+
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.collection-content {
+  overflow-x: auto;
+}
+
+.collection-content pre {
+  width: max-content;
+  max-width: none;
+  white-space: pre;
+}
